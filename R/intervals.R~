@@ -44,7 +44,7 @@ mutual.overlap <- Vectorize(function(startA,endA,startB,endB,perc.overlap){
     ioverlap <- (endB-startA)/(endA-startA)
     roverlap <- (endB-startA)/(endB-startB)
 
-    if(ioverlap>=perc.overlap&roverlap>=perc.overlap) { # mutual overlap
+    if(ioverlap>=0.9&roverlap>=perc.overlap) { # mutual overlap
       return(TRUE) # 90% overlap
     }
     return(FALSE)
